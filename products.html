@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>McTREATZ  Confectionery & Catering - Products</title>
+    <title>McTREATZ Confectionery & Catering - Products</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <style>
-      
         .category-img {
             position: relative;
         }
-
         .category-caption {
             position: absolute;
             bottom: 0;
@@ -22,35 +24,28 @@
             padding: 5px;
             font-size: 0.875rem;
         }
-
-     
         .category-img img {
             width: 100%;
             height: auto;
         }
-
         @keyframes heartbeat {
-    0%, 100% {
-        transform: scale(1);
-    }
-    25% {
-        transform: scale(1.1);
-    }
-    50% {
-        transform: scale(0.9);
-    }
-    75% {
-        transform: scale(1.1);
-    }
-}
-#loading-spinner img {
-    animation: heartbeat 1s infinite;
-}
+            0%, 100% {
+                transform: scale(1);
+            }
+            25% {
+                transform: scale(1.1);
+            }
+            50% {
+                transform: scale(0.9);
+            }
+            75% {
+                transform: scale(1.1);
+            }
+        }
+        #loading-spinner img {
+            animation: heartbeat 1s infinite;
+        }
     </style>
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favico">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
 </head>
 <body class="bg-gray-100 text-gray-800">
     <div id="loading-spinner" class="fixed inset-0 flex items-center justify-center bg-white z-50">
@@ -58,18 +53,15 @@
     </div>
     <header class="bg-white shadow-md">
         <div class="container mx-auto p-4 flex justify-between items-center">
-      
             <div class="flex items-center">
                 <a href="index.html"><img src="assets/img/LOGOO.png" alt="McTreatz Confectionery Logo" class="w-20 h-20 mr-4"></a>
-                <h1 class="text-2xl font-bold">McTREATZ  Confectionery & Catering</h1>
+                <h1 class="text-2xl font-bold">McTREATZ Confectionery & Catering</h1>
             </div>
-           
             <button class="block md:hidden text-gray-700" onclick="toggleMenu()">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
             </button>
-         
             <nav id="mobile-menu" class="hidden md:flex md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-4">
                 <a href="index.html" class="text-gray-700 px-3 py-2 block md:inline-block">Home</a>
                 <a href="products.html" class="text-gray-700 px-3 py-2 block md:inline-block">Products</a>
@@ -79,30 +71,28 @@
             </nav>
         </div>
     </header>
-    
 
     <main class="container mx-auto p-6">
         <section class="text-center mb-8">
             <h2 class="text-3xl font-bold mb-4">Our Product Categories</h2>
-            <div class="flex justify-center mb-6">
-                <button class="toggle-btn px-4 py-2 bg-blue-500 text-white rounded" data-category="pastries">Pastries</button>
-                <button class="toggle-btn px-4 py-2 bg-blue-500 text-white rounded ml-4" data-category="cakes">Cakes</button>
-                <button class="toggle-btn px-4 py-2 bg-blue-500 text-white rounded ml-4" data-category="donuts">Donuts</button>
-                <button class="toggle-btn px-4 py-2 bg-blue-500 text-white rounded ml-4" data-category="buns">Buns</button>
-                <button class="toggle-btn px-4 py-2 bg-blue-500 text-white rounded ml-4" data-category="cookies">Cookies & Biscuits</button>
-                <button class="toggle-btn px-4 py-2 bg-blue-500 text-white rounded ml-4" data-category="desserts">Desserts</button>
-                <button class="toggle-btn px-4 py-2 bg-blue-500 text-white rounded ml-4" data-category="drinks">Drinks & Beverages</button>
+            <div class="flex flex-wrap justify-center mb-6">
+                <button class="toggle-btn px-4 py-2 bg-blue-500 text-white rounded w-full md:w-auto mb-2 md:mb-0" data-category="pastries">Pastries</button>
+                <button class="toggle-btn px-4 py-2 bg-blue-500 text-white rounded w-full md:w-auto mb-2 md:mb-0 ml-0 md:ml-4" data-category="cakes">Cakes</button>
+                <button class="toggle-btn px-4 py-2 bg-blue-500 text-white rounded w-full md:w-auto mb-2 md:mb-0 ml-0 md:ml-4" data-category="donuts">Donuts</button>
+                <button class="toggle-btn px-4 py-2 bg-blue-500 text-white rounded w-full md:w-auto mb-2 md:mb-0 ml-0 md:ml-4" data-category="buns">Buns</button>
+                <button class="toggle-btn px-4 py-2 bg-blue-500 text-white rounded w-full md:w-auto mb-2 md:mb-0 ml-0 md:ml-4" data-category="cookies">Cookies & Biscuits</button>
+                <button class="toggle-btn px-4 py-2 bg-blue-500 text-white rounded w-full md:w-auto mb-2 md:mb-0 ml-0 md:ml-4" data-category="desserts">Desserts</button>
+                <button class="toggle-btn px-4 py-2 bg-blue-500 text-white rounded w-full md:w-auto mb-2 md:mb-0 ml-0 md:ml-4" data-category="drinks">Drinks & Beverages</button>
             </div>
-            <p class="text-center font-semibold text-xl mb-4">Explore the Delightful World of McTREATZ  Confectionery</p>
+            <p class="text-center font-semibold text-xl mb-4">Explore the Delightful World of McTREATZ Confectionery</p>
             <p class="text-center max-w-3xl mx-auto mb-8">
                 At McTreatz Confectionery, we believe that every bite should be a moment of pure joy. Our products are crafted with passion, precision, and the finest ingredients to bring you the very best in confectionery and pastry delights. Whether you’re looking for the perfect treat to brighten your day, something special for a celebration, or snacks to share with loved ones, McTreatz Confectionery has something for everyone.
             </p>
         </section>
 
-        
-        
-<section id="pastries" class="category-section block">
-    <h3 class="text-2xl font-bold mb-4">Pastries</h3>
+        <!-- Categories -->
+        <section id="pastries" class="category-section block">
+            <h3 class="text-2xl font-bold mb-4">Pastries</h3>
     <p class="mb-4"> A Symphony of Flavors and Textures
         Our pastry selection is a tribute to the rich culinary traditions of both African and continental cuisine. From the crispy crunch of Chinchin to the savory goodness of Meat Pies and the delicate layers of our Chicken Pies, each item is crafted with care to deliver an unforgettable taste experience. Whether you’re indulging in a midday snack or serving a spread at a party, our pastries promise to satisfy your cravings.</p>
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -131,8 +121,8 @@
             <div class="category-caption">Egg Rolls</div>
         </div>
     </div>
-</section>
-  
+
+        </section>
         <section id="cakes" class="category-section hidden">
             <h3 class="text-2xl font-bold mb-4">Cakes</h3>
             <p class="mb-4">Celebrate Every Moment
@@ -163,8 +153,8 @@
                     <div class="category-caption">Swiss Roll</div>
                 </div>
             </div>
-        </section>
 
+        </section>
         <section id="donuts" class="category-section hidden">
             <h3 class="text-2xl font-bold mb-4">Donuts</h3>
             <p class="mb-4">Sweet Rings of Joy
@@ -195,6 +185,7 @@
                     <div class="category-caption">Jam Donut</div>
                 </div>
             </div>
+
         </section>
         <section id="buns" class="category-section hidden">
             <h3 class="text-2xl font-bold mb-4">Buns</h3>
@@ -214,8 +205,8 @@
                     <div class="category-caption">Coconut Buns</div>
                 </div>
             </div>
-        </section>
 
+        </section>
         <section id="cookies" class="category-section hidden">
             <h3 class="text-2xl font-bold mb-4">Cookies & Biscuits</h3>
             <p class="mb-4">Perfectly Baked, Wonderfully Tasty
@@ -246,6 +237,7 @@
                     <div class="category-caption">Shortbread</div>
                 </div>
             </div>
+
         </section>
         <section id="desserts" class="category-section hidden">
             <h3 class="text-2xl font-bold mb-4">Desserts</h3>
@@ -265,6 +257,7 @@
                     <div class="category-caption">Coconut Flakes</div>
                 </div>
             </div>
+
         </section>
         <section id="drinks" class="category-section hidden">
             <h3 class="text-2xl font-bold mb-4">Drinks & Beverages</h3>
@@ -301,22 +294,29 @@
                     <div class="category-caption">Chocolate Drink</div>
                 </div>
             </div>
+
         </section>
     </main>
 
-    <footer class="bg-gray-900 text-white text-center p-4">
-        <p>&copy; 2024 McTREATZ Confectionery & Catering. All rights reserved.</p>
-    </footer>
-
     <script>
-        const buttons = document.querySelectorAll('.toggle-btn');
-        const sections = document.querySelectorAll('.category-section');
+        document.addEventListener('DOMContentLoaded', function () {
+            const buttons = document.querySelectorAll('.toggle-btn');
+            const sections = document.querySelectorAll('.category-section');
 
-        buttons.forEach(button => {
-            button.addEventListener('click', () => {
-                sections.forEach(section => section.classList.add('hidden'));
-                const category = button.getAttribute('data-category');
-                document.getElementById(category).classList.remove('hidden');
+            buttons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const category = this.getAttribute('data-category');
+
+                    sections.forEach(section => {
+                        if (section.id === category) {
+                            section.classList.remove('hidden');
+                            section.classList.add('block');
+                        } else {
+                            section.classList.remove('block');
+                            section.classList.add('hidden');
+                        }
+                    });
+                });
             });
         });
 
@@ -325,39 +325,10 @@
             menu.classList.toggle('hidden');
         }
 
-
-
-    
-document.querySelectorAll('.toggle-btn').forEach(button => {
-    button.addEventListener('click', () => {
-        const category = button.getAttribute('data-category');
-        document.querySelectorAll('.category-section').forEach(section => {
-            if (section.id === category) {
-                section.classList.remove('hidden');
-                section.classList.add('block');
-            } else {
-                section.classList.remove('block');
-                section.classList.add('hidden');
-            }
+        window.addEventListener('load', function() {
+            const spinner = document.getElementById('loading-spinner');
+            spinner.style.display = 'none';
         });
-    });
-});
-
-window.onload = function() {
-    document.querySelector('.toggle-btn[data-category="pastries"]').classList.add('bg-blue-700');
-};
-
-document.onreadystatechange = function () {
-        var state = document.readyState;
-        if (state === 'interactive') {
-            document.getElementById('loading-spinner').style.display = 'flex';
-        } else if (state === 'complete') {
-            document.getElementById('loading-spinner').style.display = 'none';
-        }
-    };
-
     </script>
-
-    
 </body>
 </html>
