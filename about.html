@@ -16,6 +16,23 @@
             justify-content: center;
             color: white;
         }
+        @keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    75% {
+        transform: scale(1.1);
+    }
+}
+#loading-spinner img {
+    animation: heartbeat 1s infinite;
+}
     </style>
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favico">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">

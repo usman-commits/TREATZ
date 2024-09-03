@@ -31,6 +31,24 @@
             margin: 4rem auto; /* Center the form vertically and horizontally */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
+
+        @keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    75% {
+        transform: scale(1.1);
+    }
+}
+#loading-spinner img {
+    animation: heartbeat 1s infinite;
+}
     </style>
 </head>
 

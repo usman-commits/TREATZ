@@ -34,7 +34,26 @@
         #loading-spinner {
         display: none; /* Hidden by default */
     }
+
+    @keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    75% {
+        transform: scale(1.1);
+    }
+}
+#loading-spinner img {
+    animation: heartbeat 1s infinite;
+}
     </style>
+    
 
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favico">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
@@ -70,7 +89,7 @@
     </header>
 
     <main class="container mx-auto p-6">
-        <!-- Hero Section with Image Transition -->
+        
         <section class="relative min-h-screen flex flex-col justify-center items-center overflow-hidden">
             <div class="absolute inset-0">
                 <img src="assets/img/pastry.jpg" alt="Delicious treats 1" class="hero-image fade active">
@@ -161,6 +180,9 @@
     };
 
     </script>
+    
+
+    
 </body>
 
 </html>

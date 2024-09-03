@@ -10,6 +10,26 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <style>
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            25% {
+                transform: scale(1.1);
+            }
+            50% {
+                transform: scale(0.9);
+            }
+            75% {
+                transform: scale(1.1);
+            }
+        }
+        
+        #loading-spinner img {
+            animation: heartbeat 1s infinite;
+        }
+        </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
     <div id="loading-spinner" class="fixed inset-0 flex items-center justify-center bg-white z-50">
