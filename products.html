@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McTREATZ  Confectionery & Catering - Products</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+      
+        .category-img {
+            position: relative;
+        }
+
+        .category-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            text-align: center;
+            padding: 5px;
+            font-size: 0.875rem;
+        }
+
+     
+        .category-img img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <div id="loading-spinner" class="fixed inset-0 flex items-center justify-center bg-white z-50">
+        <img src="assets/img/spinnerimg.gif" alt="Loading..." class="w-16 h-16">
+    </div>
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto p-4 flex justify-between items-center">
+      
+            <div class="flex items-center">
+                <a href="index.html"><img src="assets/img/LOGOO.png" alt="McTreatz Confectionery Logo" class="w-20 h-20 mr-4"></a>
+                <h1 class="text-2xl font-bold">McTREATZ  Confectionery & Catering</h1>
+            </div>
+           
+            <button class="block md:hidden text-gray-700" onclick="toggleMenu()">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+         
+            <nav id="mobile-menu" class="hidden md:flex md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-4">
+                <a href="index.html" class="text-gray-700 px-3 py-2 block md:inline-block">Home</a>
+                <a href="products.html" class="text-gray-700 px-3 py-2 block md:inline-block">Products</a>
+                <a href="services.html" class="text-gray-700 px-3 py-2 block md:inline-block">Services</a>
+                <a href="about.html" class="text-gray-700 px-3 py-2 block md:inline-block">About Us</a>
+                <a href="contact.html" class="text-gray-700 px-3 py-2 block md:inline-block">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+    
+
+    <main class="container mx-auto p-6">
+        <section class="text-center mb-8">
+            <h2 class="text-3xl font-bold mb-4">Our Product Categories</h2>
+            <div class="flex justify-center mb-6">
+                <button class="toggle-btn px-4 py-2 bg-blue-500 text-white rounded" data-category="pastries">Pastries</button>
+                <button class="toggle-btn px-4 py-2 bg-blue-500 text-white rounded ml-4" data-category="cakes">Cakes</button>
+                <button class="toggle-btn px-4 py-2 bg-blue-500 text-white rounded ml-4" data-category="donuts">Donuts</button>
+                <button class="toggle-btn px-4 py-2 bg-blue-500 text-white rounded ml-4" data-category="buns">Buns</button>
+                <button class="toggle-btn px-4 py-2 bg-blue-500 text-white rounded ml-4" data-category="cookies">Cookies & Biscuits</button>
+                <button class="toggle-btn px-4 py-2 bg-blue-500 text-white rounded ml-4" data-category="desserts">Desserts</button>
+                <button class="toggle-btn px-4 py-2 bg-blue-500 text-white rounded ml-4" data-category="drinks">Drinks & Beverages</button>
+            </div>
+            <p class="text-center font-semibold text-xl mb-4">Explore the Delightful World of McTREATZ  Confectionery</p>
+            <p class="text-center max-w-3xl mx-auto mb-8">
+                At McTreatz Confectionery, we believe that every bite should be a moment of pure joy. Our products are crafted with passion, precision, and the finest ingredients to bring you the very best in confectionery and pastry delights. Whether you’re looking for the perfect treat to brighten your day, something special for a celebration, or snacks to share with loved ones, McTreatz Confectionery has something for everyone.
+            </p>
+        </section>
+
+        
+        
+<section id="pastries" class="category-section block">
+    <h3 class="text-2xl font-bold mb-4">Pastries</h3>
+    <p class="mb-4"> A Symphony of Flavors and Textures
+        Our pastry selection is a tribute to the rich culinary traditions of both African and continental cuisine. From the crispy crunch of Chinchin to the savory goodness of Meat Pies and the delicate layers of our Chicken Pies, each item is crafted with care to deliver an unforgettable taste experience. Whether you’re indulging in a midday snack or serving a spread at a party, our pastries promise to satisfy your cravings.</p>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div class="category-img relative">
+            <img src="assets/img/chinchin.jpg" alt="Chinchin">
+            <div class="category-caption">Chinchin</div>
+        </div>
+        <div class="category-img relative">
+            <img src="assets/img/small chops.jpg" alt="Small Chops">
+            <div class="category-caption">Small Chops</div>
+        </div>
+        <div class="category-img relative">
+            <img src="assets/img/meat pie.jpg" alt="Meat Pie">
+            <div class="category-caption">Meat Pie</div>
+        </div>
+        <div class="category-img relative">
+            <img src="assets/img/chicken pie.jpeg" alt="Chicken Pie">
+            <div class="category-caption">Chicken Pie</div>
+        </div>
+        <div class="category-img relative">
+            <img src="assets/img/fish roll.jpg" alt="Fish Roll">
+            <div class="category-caption">Fish Roll</div>
+        </div>
+        <div class="category-img relative">
+            <img src="assets/img/egg roll.jpg" alt="Egg Rolls">
+            <div class="category-caption">Egg Rolls</div>
+        </div>
+    </div>
+</section>
+  
+        <section id="cakes" class="category-section hidden">
+            <h3 class="text-2xl font-bold mb-4">Cakes</h3>
+            <p class="mb-4">Celebrate Every Moment
+                At McTREATZ  Confectionery, we understand that cakes are at the heart of every celebration. That’s why we offer a range of cakes that cater to every occasion and taste. Whether you’re looking for a simple Cake Loaf for tea time, festive Cupcakes for a party, or a grand Layer Cake for a special event, we’ve got you covered. Each cake is baked to perfection, ensuring it’s as beautiful as it is delicious.</p>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="category-img relative">
+                    <img src="assets/img/cake loaf.jpg" alt="Cake Loaf">
+                    <div class="category-caption">Cake Loaf</div>
+                </div>
+                <div class="category-img relative">
+                    <img src="assets/img/CAKE LOAF MINI.jpg" alt="Cake Loaf (Mini)">
+                    <div class="category-caption">Cake Loaf (Mini)</div>
+                </div>
+                <div class="category-img relative">
+                    <img src="assets/img/cake slice.jpg" alt="Cake Slice">
+                    <div class="category-caption">Cake Slice</div>
+                </div>
+                <div class="category-img relative">
+                    <img src="assets/img/cup cake.jpeg" alt="Cupcakes">
+                    <div class="category-caption">Cupcakes</div>
+                </div>
+                <div class="category-img relative">
+                    <img src="assets/img/layer cake.jpg" alt="Layer Cakes">
+                    <div class="category-caption">Layer Cakes</div>
+                </div>
+                <div class="category-img relative">
+                    <img src="assets/img/swiss roll.jpeg" alt="Swiss Roll">
+                    <div class="category-caption">Swiss Roll</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="donuts" class="category-section hidden">
+            <h3 class="text-2xl font-bold mb-4">Donuts</h3>
+            <p class="mb-4">Sweet Rings of Joy
+                Our donuts are little circles of happiness, available in a variety of flavors and fillings that are sure to delight. From the classic Ring Donut to the indulgent Cream Donut, each bite is a burst of sweetness. Perfect for a morning treat, an afternoon pick-me-up, or a dessert to cap off your day, our donuts are made to please.</p>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="category-img relative">
+                    <img src="assets/img/ring donut.png" alt="Ring Donut">
+                    <div class="category-caption">Ring Donut</div>
+                </div>
+                <div class="category-img relative">
+                    <img src="assets/img/pillow donut.jpg" alt="Pillow Donut">
+                    <div class="category-caption">Pillow Donut</div>
+                </div>
+                <div class="category-img relative">
+                    <img src="assets/img/glazed donuts.jpg" alt="Glazed Donut">
+                    <div class="category-caption">Glazed Donut</div>
+                </div>
+                <div class="category-img relative">
+                    <img src="assets/img/milky donut.jpg" alt="Milky Donut">
+                    <div class="category-caption">Milky Donut</div>
+                </div>
+                <div class="category-img relative">
+                    <img src="assets/img/cream donut.jpg" alt="Cream Donut">
+                    <div class="category-caption">Cream Donut</div>
+                </div>
+                <div class="category-img relative">
+                    <img src="assets/img/jam donut.jpg" alt="Jam Donut">
+                    <div class="category-caption">Jam Donut</div>
+                </div>
+            </div>
+        </section>
+        <section id="buns" class="category-section hidden">
+            <h3 class="text-2xl font-bold mb-4">Buns</h3>
+            <p class="mb-4">Soft, Fluffy, and Irresistible
+                Our buns are a testament to the art of baking. Soft, fluffy, and bursting with flavor, they’re perfect for breakfast, lunch, or as a snack any time of the day. Whether you prefer the classic Bread Buns, the creamy richness of Cream Buns, or the tropical twist of Coconut Buns, you’ll find that our buns are simply irresistible.</p>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="category-img relative">
+                    <img src="assets/img/bread bun.jpg" alt="Bread Buns">
+                    <div class="category-caption">Bread Buns</div>
+                </div>
+                <div class="category-img relative">
+                    <img src="assets/img/creamy buns.jpg" alt="Cream Buns">
+                    <div class="category-caption">Cream Buns</div>
+                </div>
+                <div class="category-img relative">
+                    <img src="assets/img/Coconut-Bun.jpg " alt="Coconut Buns">
+                    <div class="category-caption">Coconut Buns</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cookies" class="category-section hidden">
+            <h3 class="text-2xl font-bold mb-4">Cookies & Biscuits</h3>
+            <p class="mb-4">Perfectly Baked, Wonderfully Tasty
+                Nothing beats the comfort of a well-baked cookie or biscuit. At McTREATZ  Confectionery, our cookies and biscuits are crafted to perfection, offering a delightful crunch with every bite. From the buttery softness of our Shortbread to the rich flavors of Chocolate Cookies and the unique taste of Coffee Cookies, there’s a flavor for every palate.</p>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="category-img relative">
+                    <img src="assets/img/butter cookies.jpg" alt="Butter Cookies">
+                    <div class="category-caption">Butter Cookies</div>
+                </div>
+                <div class="category-img relative">
+                    <img src="assets/img/chocolate cookie.jpg" alt="Chocolate Cookies">
+                    <div class="category-caption">Chocolate Cookies</div>
+                </div>
+                <div class="category-img relative">
+                    <img src="assets/img/coffee cookie.jpg" alt="Coffee Cookies">
+                    <div class="category-caption">Coffee Cookies</div>
+                </div>
+                <div class="category-img relative">
+                    <img src="assets/img/coconut cookie.jpg" alt="Coconut Cookies">
+                    <div class="category-caption">Coconut Cookies</div>
+                </div>
+                <div class="category-img relative">
+                    <img src="assets/img/custard cookie.jpg" alt="Custard Cookies">
+                    <div class="category-caption">Custard Cookies</div>
+                </div>
+                <div class="category-img relative">
+                    <img src="assets/img/shotbread.jpg" alt="Shortbread">
+                    <div class="category-caption">Shortbread</div>
+                </div>
+            </div>
+        </section>
+        <section id="desserts" class="category-section hidden">
+            <h3 class="text-2xl font-bold mb-4">Desserts</h3>
+            <p class="mb-4">Sweet Indulgences for Every Occasion
+                Our dessert offerings are designed to bring a little sweetness to your life. Whether you’re indulging in a creamy Parfait, enjoying the rich taste of Caramel Balls, or savoring the tropical flavors of Coconut Flakes, our desserts are the perfect way to treat yourself. They’re ideal for finishing off a meal, sharing with friends, or enjoying as a sweet snack.</p>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="category-img relative">
+                    <img src="assets/img/parfeit.jpg" alt="Parfait">
+                    <div class="category-caption">Parfait</div>
+                </div>
+                <div class="category-img relative">
+                    <img src="assets/img/caramel balls.jpg" alt="Caramel Balls">
+                    <div class="category-caption">Caramel Balls</div>
+                </div>
+                <div class="category-img relative">
+                    <img src="assets/img/coconut flakes.jpg" alt="Coconut Flakes">
+                    <div class="category-caption">Coconut Flakes</div>
+                </div>
+            </div>
+        </section>
+        <section id="drinks" class="category-section hidden">
+            <h3 class="text-2xl font-bold mb-4">Drinks & Beverages</h3>
+            <p class="mb-4">Refreshingly Delicious
+                Complement your treats with our range of refreshing drinks and beverages. From the traditional tastes of Zobo and Kunu to the invigorating flavors of Ginger Juice and Fruit Juice, our drinks are made from natural ingredients and crafted to quench your thirst. Whether you’re cooling down with a chilled Lemonade or warming up with a comforting Chocolate Drink, McTreatz Confectionery has the perfect drink to accompany your meal.
+            </p>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="category-img relative">
+                    <img src="assets/img/zobo.jpg" alt="Zobo">
+                    <div class="category-caption">Zobo</div>
+                </div>
+                <div class="category-img relative">
+                    <img src="assets/img/kunu.jpeg" alt="Kunu">
+                    <div class="category-caption">Kunu</div>
+                </div>
+                <div class="category-img relative">
+                    <img src="assets/img/tiger nut.jpeg" alt="Tigernut">
+                    <div class="category-caption">Tigernut</div>
+                </div>
+                <div class="category-img relative">
+                    <img src="assets/img/ginger juice.jpeg" alt="Ginger Juice">
+                    <div class="category-caption">Ginger Juice</div>
+                </div>
+                <div class="category-img relative">
+                    <img src="assets/img/fruit juice.jpg" alt="Fruit Juice">
+                    <div class="category-caption">Fruit Juice</div>
+                </div>
+                <div class="category-img relative">
+                    <img src="assets/img/lemonade.jpg" alt="Lemonade">
+                    <div class="category-caption">Lemonade</div>
+                </div>
+                <div class="category-img relative">
+                    <img src="assets/img/chocolate drink.jpeg" alt="Chocolate Drink">
+                    <div class="category-caption">Chocolate Drink</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white text-center p-4">
+        <p>&copy; 2024 McTREATZ Confectionery & Catering. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const buttons = document.querySelectorAll('.toggle-btn');
+        const sections = document.querySelectorAll('.category-section');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                sections.forEach(section => section.classList.add('hidden'));
+                const category = button.getAttribute('data-category');
+                document.getElementById(category).classList.remove('hidden');
+            });
+        });
+
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+
+
+    
+document.querySelectorAll('.toggle-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const category = button.getAttribute('data-category');
+        document.querySelectorAll('.category-section').forEach(section => {
+            if (section.id === category) {
+                section.classList.remove('hidden');
+                section.classList.add('block');
+            } else {
+                section.classList.remove('block');
+                section.classList.add('hidden');
+            }
+        });
+    });
+});
+
+window.onload = function() {
+    document.querySelector('.toggle-btn[data-category="pastries"]').classList.add('bg-blue-700');
+};
+
+document.onreadystatechange = function () {
+        var state = document.readyState;
+        if (state === 'interactive') {
+            document.getElementById('loading-spinner').style.display = 'flex';
+        } else if (state === 'complete') {
+            document.getElementById('loading-spinner').style.display = 'none';
+        }
+    };
+
+    </script>
+
+    
+</body>
+</html>

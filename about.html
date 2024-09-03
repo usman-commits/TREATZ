@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McTREATZ Confectionery & Catering - About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .banner {
+            background-image: url('assets/img/baner.jpg'); 
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+    </style>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <div id="loading-spinner" class="fixed inset-0 flex items-center justify-center bg-white z-50">
+        <img src="assets/img/spinnerimg.gif" alt="Loading..." class="w-16 h-16">
+    </div>
+    
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto p-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="index.html"><img src="assets/img/LOGOO.png" alt="McTreatz Confectionery Logo" class="w-20 h-20 mr-4"></a>
+                <h1 class="text-2xl font-bold">McTREATZ Confectionery & Catering</h1>
+            </div>
+            <button class="block md:hidden text-gray-700" onclick="toggleMenu()">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            <nav id="mobile-menu" class="hidden md:flex md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-4">
+                <a href="index.html" class="text-gray-700 px-3 py-2 block md:inline-block">Home</a>
+                <a href="products.html" class="text-gray-700 px-3 py-2 block md:inline-block">Products</a>
+                <a href="services.html" class="text-gray-700 px-3 py-2 block md:inline-block">Services</a>
+                <a href="about.html" class="text-gray-700 px-3 py-2 block md:inline-block">About Us</a>
+                <a href="contact.html" class="text-gray-700 px-3 py-2 block md:inline-block">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-6">
+        <section class="banner">
+            <h2 class="text-4xl font-bold text-center">About Us</h2>
+        </section>
+        <section class="mt-8">
+            <p class="text leading-relaxed">
+                Welcome to McTREATZ Confectionery and Catering, where passion meets perfection in every bite. We are dedicated to crafting exquisite pastries, cakes, and beverages that elevate every occasion and bring a touch of delight to your day.
+            </p>
+            <p class="text leading-relaxed mt-4">
+                At McTREATZ, we pride ourselves on our commitment to quality and creativity. Our team of skilled artisans and chefs pours love and expertise into each product, ensuring that every treat we offer is a masterpiece of flavor and texture. From our savory pastries to our sweet confections, each item is made with the finest ingredients and a keen attention to detail.
+            </p>
+            <p class="text leading-relaxed mt-4">
+                We believe that food is not just about nourishment but about creating moments of joy and connection. Whether you’re celebrating a special event or simply enjoying a moment of indulgence, our products are designed to bring happiness and satisfaction to your life.
+            </p>
+            <p class="text leading-relaxed mt-4">
+                Our mission is to provide exceptional confectionery and catering services that exceed your expectations. We strive to be more than just a provider of delicious treats; we aim to be a part of your memorable experiences. Our goal is to make every occasion special with our thoughtfully crafted creations, delivered with impeccable service.
+            </p>
+            <p class="text leading-relaxed mt-4">
+                As we look to the future, our vision is to become a leading name in the confectionery and catering industry. We aspire to be recognized for our innovation, quality, and unwavering dedication to customer satisfaction. At McTREATZ, we are excited to continue our journey of delighting you with every bite.
+            </p>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6 mt-12">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 McTREATZ Confectionery. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+    function toggleMenu() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+    }
+
+    document.onreadystatechange = function () {
+        var state = document.readyState;
+        if (state === 'interactive') {
+            document.getElementById('loading-spinner').style.display = 'flex';
+        } else if (state === 'complete') {
+            document.getElementById('loading-spinner').style.display = 'none';
+        }
+    };
+
+</script>
+</body>
+</html>

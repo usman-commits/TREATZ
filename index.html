@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McTREATZ  Confectionery & Catering - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+ <!-- Font Awesome CDN -->
+    <style>
+        /* Hero Image Transition */
+        .fade {
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+
+        .fade.active {
+            opacity: 1;
+        }
+
+        /* Ensure images are positioned correctly */
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #loading-spinner {
+        display: none; /* Hidden by default */
+    }
+    </style>
+
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <!-- Loading Spinner -->
+<div id="loading-spinner" class="fixed inset-0 flex items-center justify-center bg-white z-50">
+    <img src="assets/img/spinnerimg.gif" alt="Loading..." class="w-16 h-16">
+</div>
+
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto p-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="assets/img/LOGOO.png" alt="McTreatz Confectionery Logo" class="w-20 h-20 mr-4">
+                <h1 class="text-2xl font-bold">McTREATZ  Confectionery & Catering</h1>
+            </div>
+            <button class="block md:hidden text-gray-700" onclick="toggleMenu()">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            <nav id="mobile-menu" class="hidden md:flex md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-4">
+                <a href="index.html" class="text-gray-700 px-3 py-2 block md:inline-block">Home</a>
+                <a href="products.html" class="text-gray-700 px-3 py-2 block md:inline-block">Products</a>
+                <a href="services.html" class="text-gray-700 px-3 py-2 block md:inline-block">Services</a>
+                <a href="about.html" class="text-gray-700 px-3 py-2 block md:inline-block">About Us</a>
+                <a href="contact.html" class="text-gray-700 px-3 py-2 block md:inline-block">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-6">
+        <!-- Hero Section with Image Transition -->
+        <section class="relative min-h-screen flex flex-col justify-center items-center overflow-hidden">
+            <div class="absolute inset-0">
+                <img src="assets/img/pastry.jpg" alt="Delicious treats 1" class="hero-image fade active">
+                <img src="assets/img/catering.jpg" alt="Delicious treats 2" class="hero-image fade">
+                <img src="assets/img/dessert.jpg" alt="Delicious treats 3" class="hero-image fade">
+                <img src="assets/img/drinks.jpg" alt="Delicious treats 4" class="hero-image fade">
+               
+            </div>
+            <div class="relative z-10 text-center text-white">
+                <h2 class="text-4xl font-bold mb-4">Welcome to McTREATZ  Confectionery & Catering</h2>
+                <p class="mb-8">Bringing you delightful treats and exceptional catering for every occasion.</p>
+            </div>
+        </section>
+
+        <!-- Specialties Section -->
+        <section class="mt-12">
+            <h3 class="text-3xl font-bold mb-6">Our Specialties</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-4 shadow rounded">
+                    <h4 class="text-xl font-semibold">Pastries</h4>
+                    <p class="mt-2">Explore our range of fresh and tasty pastries.</p>
+                </div>
+                <div class="bg-white p-4 shadow rounded">
+                    <h4 class="text-xl font-semibold">Cakes</h4>
+                    <p class="mt-2">Delightful cakes for every occasion.</p>
+                </div>
+                <div class="bg-white p-4 shadow rounded">
+                    <h4 class="text-xl font-semibold">Buns</h4>
+                    <p class="mt-2">Delightful cakes for every occasion.</p>
+                </div>
+            </div>
+            <br />
+            <div class="flex justify-center my-8">
+                <a href="products.html" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"> Explore Our Products</a>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6 mt-12">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 McTREATZ Confectionery & Catering. All rights reserved.</p>
+            <div class="mt-4">
+                <a href="https://www.facebook.com/mctreatzconfectionery?mibextid=ZbWkwL" class="text-white mx-2" aria-label="Facebook">
+                    <i class="fab fa-facebook-f fa-lg"></i>
+                </a>
+                <a href="mailto:mctreatzconfectioneries@gmail.com" class="text-white mx-2" aria-label="Email">
+                    <i class="fas fa-envelope fa-lg"></i>
+                </a>
+                <a href="#" class="text-white mx-2" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-lg"></i>
+                </a>
+                <a href="tel:+2349129161729" class="text-white mx-2" aria-label="Phone">
+                    <i class="fas fa-phone fa-lg"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for Image Transition
+        let currentImageIndex = 0;
+        const images = document.querySelectorAll('.hero-image');
+
+        function showNextImage() {
+            images[currentImageIndex].classList.remove('active');
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            images[currentImageIndex].classList.add('active');
+        }
+
+        setInterval(showNextImage, 5000); // Change image every 5 seconds
+
+        // Toggle Menu for Mobile
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+
+
+        document.onreadystatechange = function () {
+        var state = document.readyState;
+        if (state === 'interactive') {
+            document.getElementById('loading-spinner').style.display = 'flex';
+        } else if (state === 'complete') {
+            document.getElementById('loading-spinner').style.display = 'none';
+        }
+    };
+
+    </script>
+</body>
+
+</html>
